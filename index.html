@@ -218,30 +218,60 @@
         }
 
         .hero-content {
-            text-align: center;
-            max-width: 800px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 4rem;
+            width: 100%;
+            max-width: 1100px;
+            text-align: left;
             z-index: 1;
         }
 
+        .hero-image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .profile-img-container {
-            margin-bottom: 1.5rem;
+            position: relative;
             display: inline-block;
         }
 
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--accent-primary);
-            box-shadow: 0 0 20px var(--accent-glow);
+        .profile-img-container::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--accent-primary);
+            border-radius: 24px;
+            z-index: -1;
             transition: var(--transition-main);
         }
 
-        .profile-img:hover {
-            transform: scale(1.05) rotate(3deg);
+        .profile-img {
+            width: 320px;
+            height: 380px;
+            border-radius: 24px;
+            object-fit: cover;
+            border: 4px solid var(--surface-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: var(--transition-main);
+            display: block;
+        }
+
+        .profile-img-container:hover .profile-img {
+            transform: translate(-10px, -10px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px var(--accent-glow);
+        }
+
+        .profile-img-container:hover::before {
+            transform: translate(10px, 10px);
             border-color: var(--accent-secondary);
-            box-shadow: 0 0 30px rgba(236, 72, 153, 0.4);
         }
 
         .subtitle {
@@ -291,7 +321,7 @@
         .hero-btns {
             display: flex;
             gap: 1rem;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
         }
 
@@ -669,11 +699,28 @@
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
 
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+                padding-top: 6rem;
+            }
+
+            .hero-image-wrapper {
+                order: -1;
+            }
+
+            .profile-img {
+                width: 240px;
+                height: 280px;
+            }
+
             .hero-btns {
                 flex-direction: column;
                 width: 100%;
                 max-width: 300px;
                 margin: 0 auto;
+                justify-content: center;
             }
 
             .btn {
@@ -722,18 +769,22 @@
     <section id="home" class="hero">
         <div class="hero-blob"></div>
         <div class="hero-content">
-            <div class="profile-img-container fade-in">
-                <img src="profile.jpg" alt="Oggu Shivani" class="profile-img">
+            <div class="hero-text">
+                <span class="subtitle fade-in">Hello, World! I am</span>
+                <h1 class="title fade-in stagger-1">Oggu Shivani</h1>
+                <h2 class="tagline fade-in stagger-2">Building digital experiences that matter</h2>
+                <div class="location fade-in stagger-3">
+                    <i class='bx bxs-map'></i> Hyderabad, India
+                </div>
+                <div class="hero-btns fade-in stagger-4">
+                    <a href="#projects" class="btn btn-primary"><i class='bx bx-briefcase'></i> View My Work</a>
+                    <a href="#contact" class="btn btn-outline"><i class='bx bx-envelope'></i> Contact Me</a>
+                </div>
             </div>
-            <span class="subtitle fade-in stagger-1">Hello, World! I am</span>
-            <h1 class="title fade-in stagger-2">Oggu Shivani</h1>
-            <h2 class="tagline fade-in stagger-3">Building digital experiences that matter</h2>
-            <div class="location fade-in stagger-4">
-                <i class='bx bxs-map'></i> Hyderabad, India
-            </div>
-            <div class="hero-btns fade-in stagger-4">
-                <a href="#projects" class="btn btn-primary"><i class='bx bx-briefcase'></i> View My Work</a>
-                <a href="#contact" class="btn btn-outline"><i class='bx bx-envelope'></i> Contact Me</a>
+            <div class="hero-image-wrapper fade-in stagger-2">
+                <div class="profile-img-container">
+                    <img src="profile.jpg" alt="Oggu Shivani" class="profile-img">
+                </div>
             </div>
         </div>
     </section>

@@ -325,13 +325,24 @@
             flex-wrap: wrap;
         }
 
-        /* About Section */
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .about-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .about-content {
             background: var(--surface-color);
             padding: 3rem;
             border-radius: 24px;
             border: 1px solid rgba(255,255,255,0.03);
-            text-align: center;
+            text-align: left;
             font-size: 1.1rem;
             color: var(--text-secondary);
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
@@ -759,6 +770,8 @@
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#hackathons-internships">Hackathons & Internships</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -793,11 +806,9 @@
     <section id="about" class="section">
         <h2 class="section-title fade-in">About Me</h2>
         <div class="container">
-            <div class="about-content fade-in">
+            <div class="about-content fade-in text-center">
                 <p>I am a passionate Computer Science student currently pursuing my B.Tech in Computer Science and Engineering at Vignan institute of technology and science. I am always curious to learn, grow, and turn ideas into meaningful solutions. I enjoy taking on challenges and continuously improving myself through every experience.</p>
                 <p>I have a strong interest in Web Development and Problem Solving, where I enjoy building practical, user-friendly applications and finding effective solutions to real-world challenges. My dedication, creativity, willingness to learn, and growth mindset make me a strong candidate who is ready to take on new opportunities and contribute with genuine enthusiasm.</p>
-                
-                
             </div>
         </div>
     </section>
@@ -852,6 +863,129 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <h2 class="section-title fade-in">Certifications</h2>
+        <div class="projects-grid">
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">AI Agent Certification</h3>
+                    <div class="project-tech">
+                        <a href="cert-ai-agent.pdf" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in stagger-1">
+                <div class="project-content">
+                    <h3 class="project-title">DBMS Certification</h3>
+                    <div class="project-tech">
+                        <a href="cert-dbms.pdf" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in stagger-2">
+                <div class="project-content">
+                    <h3 class="project-title">Generative AI on AWS</h3>
+                    <div class="project-tech">
+                        <a href="cert-genai-aws.pdf" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in stagger-3">
+                <div class="project-content">
+                    <h3 class="project-title">Generative AI for Everyone</h3>
+                    <div class="project-tech">
+                        <a href="cert-genai-everyone.pdf" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">HTML Certification</h3>
+                    <div class="project-tech">
+                        <a href="cert-html.jpg" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hackathons & Internships Section -->
+    <section id="hackathons-internships" class="section">
+        <h2 class="section-title fade-in">Hackathons & Internships</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">YUVAAN AI/ML Hackathon</h3>
+                    <p class="project-desc">National AI/ML Hackathon by Vivriti Capital organized by IIT Hyderabad. Participated as Team oggushivani3.</p>
+                    <div class="project-tech" style="margin-bottom: 1rem;">
+                        <span>AI/ML</span>
+                        <span>Hackathon</span>
+                    </div>
+                    <a href="Hacathon2.jpeg" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in stagger-1">
+                <div class="project-content">
+                    <h3 class="project-title">Convergence2k25R Hackathon</h3>
+                    <p class="project-desc">Software Hackathon organized by VNR VJIET. Participated as Team Nemesis.</p>
+                    <div class="project-tech" style="margin-bottom: 1rem;">
+                        <span>Software</span>
+                        <span>Hackathon</span>
+                    </div>
+                    <a href="Hacthon.jpeg" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                </div>
+            </div>
+
+            <div class="project-card fade-in stagger-2">
+                <div class="project-content">
+                    <h3 class="project-title">CodeAlpha Internship</h3>
+                    <p class="project-desc">Frontend Development Internship (June 2026)</p>
+                    <div class="project-tech" style="margin-bottom: 1rem;">
+                        <span>Frontend</span>
+                    </div>
+                    <a href="Internship at codeAlpha.pdf" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                </div>
+            </div>
+
+            <div class="project-card fade-in stagger-3">
+                <div class="project-content">
+                    <h3 class="project-title">Future Interns</h3>
+                    <p class="project-desc">Full Stack Web Development Internship (Feb - Mar 2026)</p>
+                    <div class="project-tech" style="margin-bottom: 1rem;">
+                        <span>Full Stack</span>
+                    </div>
+                    <a href="Internship at Future Interns Offer Letter.pdf" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">VISWAM.AI (Summer of AI)</h3>
+                    <p class="project-desc">AI Developer Intern (August 2025)</p>
+                    <div class="project-tech" style="margin-bottom: 1rem;">
+                        <span>AI Development</span>
+                    </div>
+                    <a href="summar of AI Internship.jpeg" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                </div>
+            </div>
+            
+            <div class="project-card fade-in">
+                <div class="project-content">
+                    <h3 class="project-title">ApexPlanet</h3>
+                    <p class="project-desc">Internship at ApexPlanet</p>
+                    <div class="project-tech" style="margin-bottom: 1rem;">
+                        <span>Internship</span>
+                    </div>
+                    <a href="Internship at ApexPlanet.pdf" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Certificate</a>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -944,7 +1078,7 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-date">2022 – 2024</span>
-                    <h3 class="timeline-title">Higher Secondary Education</h3>
+                    <h3 class="timeline-title">Intermediate</h3>
                     <h4 class="timeline-subtitle">Narayana Junior College</h4>
                     <div class="timeline-meta">Percentage: 97%</div>
                 </div>
